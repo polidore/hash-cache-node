@@ -2,8 +2,8 @@ var crypto = require('crypto');
 var URLSafeBase64 = require('urlsafe-base64');
 
 module.exports = function(algorithm) {
-  var cache = {};
-  var rcache = {};
+  this.cache = {};
+  this.rcache = {};
   return function(data) {
     if(cache[data]) return cache[data];
 
