@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/polidore/hash-cache-node/issues"
   },
-  "homepage": "https://github.com/polidore/hash-cache-node"
+  "homepage": "https://github.com/polidore/hash-cache-node",
+  "dependencies": {
+    "urlsafe-base64": "^1.0.0"
+  }
 }

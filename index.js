@@ -1,4 +1,5 @@
 var crypto = require('crypto');
+var URLSafeBase64 = require('urlsafe-base64');
 
 module.exports = function(algorithm) {
   var cache = {};
@@ -6,6 +7,7 @@ module.exports = function(algorithm) {
   return function(data) {
     var sum = crypto.createHash(algorithm);
     sum.update(data);
-    return sum.digest('hex');
+    var base64 = sum.digest('base64');
+    return URLSafeBase64.encode(base64);
   }
 }
