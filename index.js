@@ -1,18 +1,22 @@
 var crypto = require('crypto');
 var URLSafeBase64 = require('urlsafe-base64');
 
-module.exports = function(algorithm) {
+function HashCache(algorithm) {
   this.cache = {};
   this.rcache = {};
-  return function(data) {
-    if(cache[data]) return cache[data];
+  this.algorithm = algorithm;
+}
 
-    var sum = crypto.createHash(algorithm);
+HashCache.prototype.encode = function(data)  {
+    if(this.cache[data]) return this.cache[data];
+
+    var sum = crypto.createHash(this.algorithm);
     sum.update(data);
     var base64 = sum.digest('base64');
     base64 = URLSafeBase64.encode(base64);
-    cache[data] = base64;
-    rcache[base64] = data;
+    this.cache[data] = base64;
+    this.rcache[base64] = data;
     return base64;
-  }
 }
+
+module.exports = HashCache;
