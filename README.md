@@ -5,11 +5,11 @@ I wanted a library that I could use to name things with MD5 hash strings.  It wo
 # Usage
 
 ```javascript
-var HashCache = require('hash-cache');
-var hashCach = new HashCache('md5');
+var Hache = require('hache');
+var hache = new Hache('md5');
 
-var hash = hashCache.encode('randomString'); //generates
-var hashFromCache = hashCache.encode('randomString'); //serves from memory
+var hash = hache.encode('randomString'); //generates
+var hashFromCache = hache.encode('randomString'); //serves from memory
 ```
 
 # Assumptions

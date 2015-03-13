@@ -1,5 +1,5 @@
 {
-  "name": "hash-cache",
+  "name": "hache",
   "version": "0.0.1",
   "description": "Create URL-compliant string hashes with a cache",
   "main": "index.js",
