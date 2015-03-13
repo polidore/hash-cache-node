@@ -1,7 +1,7 @@
 {
   "name": "hash-cache",
   "version": "0.0.1",
-  "description": "Create string hashes with a transparent cache",
+  "description": "Create URL-compliant string hashes with a cache",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
