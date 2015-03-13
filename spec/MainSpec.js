@@ -9,5 +9,7 @@ describe("Hash Cash", function()  {
     var userSymbolSide = hashCache.encode(uss);
     expect(symbolSide).toBe('io2Wq8klRaMIufOxNkX8SA');
     expect(userSymbolSide).toBe('jAH1pT4TuUFVsl8KH-_IDQ');
+    expect(hashCache.cache[ss]).toBe('io2Wq8klRaMIufOxNkX8SA');
+    expect(hashCache.rcache['io2Wq8klRaMIufOxNkX8SA']).toBe(ss);
   });
 });
